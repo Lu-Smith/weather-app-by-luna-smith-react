@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CurrentDate from "./CurrentDate";
-import Time from "./Time";
+import WeatherData from "./WeatherData";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -17,30 +17,36 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
     });
   }
+  function searchCity() {
+    let apiKey = `530086b42621ecf2dfa680253f189a88`;
+    let units = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSearchCity(response) {
+    setCity(response.target.value);
+  }
+  function handleSearch(event) {
+    event.preventDefault();
+    searchCity();
+  }
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        Hello, today in {weatherData.city} weather is:
-        <ul>
-          <li>
-            <Time date={weatherData.date} />
-          </li>
-          <li>{Math.round(weatherData.temperature)}°C</li>
-          <li>{weatherData.descriptions}</li>
-          <li>{Math.round(weatherData.wind)}km/h</li>
-          <li>{weatherData.humidity}%</li>
-        </ul>
-        <div>
-          <CurrentDate date={weatherData.date} />
-        </div>
+        <form onSubmit={handleSearch}>
+          <input
+            type="search"
+            placeholder="Enter a city"
+            autoFocus={true}
+            onChange={handleSearchCity}
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <WeatherData currentData={weatherData} />
       </div>
     );
   } else {
-    let apiKey = `530086b42621ecf2dfa680253f189a88`;
-    let units = `metric`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
-
+    searchCity();
     return "Hello World";
   }
 }
