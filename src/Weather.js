@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherData from "./WeatherData";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,6 +14,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       descriptions: response.data.weather[0].description,
+      icons: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
     });
@@ -33,6 +35,10 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <WeatherIcon
+          description={weatherData.descriptions}
+          icon={weatherData.icons}
+        />
         <form onSubmit={handleSearch}>
           <input
             type="search"
