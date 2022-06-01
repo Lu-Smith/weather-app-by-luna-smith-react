@@ -1,0 +1,38 @@
+.SunriseSunset h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  width: 80%;
+  padding: 40px 0;
+}
+.SunriseSunset .row {
+  text-align: center;
+  margin: 0;
+}
+.SunriseSunset .top {
+  padding-top: 10px;
+}
+
+.SunriseSunset .sun,
+.moon {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.SunriseSunset .sunrise,
+.sunset {
+  position: relative;
+  bottom: 65px;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+.SunriseSunset .sunrise {
+  color: #c62874;
+}
+.SunriseSunset .sunset {
+  color: #2e486b;
+}

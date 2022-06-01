@@ -4,9 +4,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <h1>Hello People</h1>
-        <Weather defaultCity="Edinburgh" />
+      <div className="container night-theme">
+        <div className="box">
+          <Weather defaultCity="Edinburgh" />
+        </div>
       </div>
     </div>
   );

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import WeatherData from "./WeatherData";
-import WeatherIcon from "./WeatherIcon";
+import SunriseSunset from "./SunriseSunset";
+import ConvertTemperature from "./ConvertTemperature";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -17,6 +16,8 @@ export default function Weather(props) {
       icons: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
   }
   function searchCity() {
@@ -35,10 +36,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <WeatherIcon
-          description={weatherData.descriptions}
-          icon={weatherData.icons}
-        />
+        <SunriseSunset currentData={weatherData} />
         <form onSubmit={handleSearch}>
           <input
             type="search"
@@ -48,7 +46,10 @@ export default function Weather(props) {
           />
           <input type="submit" value="Search" />
         </form>
-        <WeatherData currentData={weatherData} />
+        <ConvertTemperature
+          celsius={weatherData.temperature}
+          currentData={weatherData}
+        />
       </div>
     );
   } else {
