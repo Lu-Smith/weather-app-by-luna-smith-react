@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CurrentDate from "./CurrentDate";
-import Time from "./Time";
 import Key from "./Key";
 import Image from "./Image";
+import Table from "./Table";
 import "./ConvertTemperature.css";
 
 export default function ConvertTemperature(props) {
@@ -36,21 +36,15 @@ export default function ConvertTemperature(props) {
           currentCity={props.currentData.city}
           icon={props.currentData.icons}
         />
+
         <div className="WeatherData">
-          <div className="table">
-            <ul className="table-details">
-              <li className="today">Today</li>
-              <li className="today">
-                <Time time={props.currentData.date} />
-              </li>
-              <li className="today">{temp}</li>
-              <li className="today">{props.currentData.descriptions}</li>
-              <li className="today">
-                🍃{Math.round(props.currentData.wind)}km/h
-              </li>
-              <li className="today">💧{props.currentData.humidity}%</li>
-            </ul>
-          </div>
+          <Table
+            timeNow={props.currentData.date}
+            currentTemp={temp}
+            description={props.currentData.descriptions}
+            wind={Math.round(props.currentData.wind)}
+            humidity={props.currentData.humidity}
+          />
           <div>
             <CurrentDate date={props.currentData.date} />
             <Key />
@@ -81,20 +75,13 @@ export default function ConvertTemperature(props) {
           icon={props.currentData.icons}
         />
         <div className="WeatherData">
-          <div className="table">
-            <ul className="table-details">
-              <li className="today">Today</li>
-              <li className="today">
-                <Time time={props.currentData.date} />
-              </li>
-              <li className="today">{temp}</li>
-              <li className="today">{props.currentData.descriptions}</li>
-              <li className="today">
-                {Math.round(props.currentData.wind)}km/h
-              </li>
-              <li className="today">{props.currentData.humidity}%</li>
-            </ul>
-          </div>
+          <Table
+            timeNow={props.currentData.date}
+            currentTemp={temp}
+            description={props.currentData.descriptions}
+            wind={Math.round(props.currentData.wind)}
+            humidity={props.currentData.humidity}
+          />
           <div>
             <CurrentDate date={props.currentData.date} />
             <Key />
