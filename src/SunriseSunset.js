@@ -3,6 +3,7 @@ import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
 import Sun from "./media/Emojis/WeatherEmojis/sunbyLunaSmith.png";
 import Moon from "./media/Emojis/WeatherEmojis/moonbyLunaSmith.png";
+import Celebration from "./Celebration";
 import "./SunriseSunset.css";
 
 export default function SunriseSunset(props) {
@@ -16,7 +17,9 @@ export default function SunriseSunset(props) {
           </div>
         </div>
         <div className="col-6 day-celebration">
-          <h1>Pancake Day 🥞</h1>
+          <h1>
+            <Celebration date={props.currentData.date} />
+          </h1>
         </div>
         <div className="col-3">
           <img src={Moon} alt="moon emoji by Luna Smith" className="moon" />

@@ -20,6 +20,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
+      timezone: response.data.timezone,
     });
   }
   function searchCity() {

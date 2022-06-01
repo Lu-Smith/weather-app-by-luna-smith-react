@@ -8,10 +8,10 @@ export default function Table(props) {
       <ul className="table-details">
         <li className="today">Today</li>
         <li className="today">
-          <Time time={props.timeNow} />
+          <Time time={props.timeNow} timezone={props.timezoneNow} />
         </li>
         <li className="today">{props.currentTemp}</li>
-        <li className="today">{props.description}</li>
+        <li className="today text-capitalize">{props.description}</li>
         <li className="today">🍃{props.wind}km/h</li>
         <li className="today">💧{props.humidity}%</li>
       </ul>

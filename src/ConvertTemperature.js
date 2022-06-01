@@ -35,6 +35,7 @@ export default function ConvertTemperature(props) {
           currentTemp={temp}
           currentCity={props.currentData.city}
           icon={props.currentData.icons}
+          date={props.currentData.date}
         />
 
         <div className="WeatherData">
@@ -44,6 +45,7 @@ export default function ConvertTemperature(props) {
             description={props.currentData.descriptions}
             wind={Math.round(props.currentData.wind)}
             humidity={props.currentData.humidity}
+            timezoneNow={props.currentData.timezone}
           />
           <div>
             <CurrentDate date={props.currentData.date} />
@@ -73,6 +75,7 @@ export default function ConvertTemperature(props) {
           currentTemp={temp}
           currentCity={props.currentData.city}
           icon={props.currentData.icons}
+          date={props.currentData.date}
         />
         <div className="WeatherData">
           <Table
@@ -81,6 +84,7 @@ export default function ConvertTemperature(props) {
             description={props.currentData.descriptions}
             wind={Math.round(props.currentData.wind)}
             humidity={props.currentData.humidity}
+            timezoneNow={props.currentData.timezone}
           />
           <div>
             <CurrentDate date={props.currentData.date} />
