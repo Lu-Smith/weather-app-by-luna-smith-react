@@ -9,7 +9,6 @@ export default function Sunrise(props) {
   let searchDate = new Date(searchCity);
   let hour = searchDate.getHours();
   let minute = searchDate.getMinutes();
-
   if (minute < 10) {
     minute = `0${minute}`;
   }

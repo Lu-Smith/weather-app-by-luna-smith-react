@@ -35,24 +35,3 @@
   padding-top: 5px;
   text-align: center;
 }
-
-.ConvertTemperature .table {
-  background: #f582a7;
-  padding: 10px;
-  line-height: 45px;
-}
-
-.ConvertTemperature .table-details {
-  list-style: none;
-  padding: 10px;
-}
-
-.ConvertTemperature .today {
-  background: rgb(239, 239, 106);
-  padding: 8px 0;
-  color: #711a75;
-  font-weight: bold;
-  box-shadow: 5px 5px 5px #00000080;
-  font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
-}

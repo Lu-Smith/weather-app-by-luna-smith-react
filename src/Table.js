@@ -6,7 +6,7 @@ export default function Table(props) {
   return (
     <div className="Table">
       <ul className="table-details">
-        <li className="today">Today</li>
+        <li className="today main-day">Today</li>
         <li className="today">
           <Time time={props.timeNow} timezone={props.timezoneNow} />
         </li>

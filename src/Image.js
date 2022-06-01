@@ -30,7 +30,7 @@ export default function Image(props) {
         <h2>{props.currentCity}</h2>
       </div>
     );
-  } else if (hour > 6 && hour < 8) {
+  } else if (hour > 5 && hour < 8) {
     return (
       <div className="Image">
         <img src={Sunrise} alt="sunrise by Luna Smith" className="day-image" />
@@ -75,7 +75,7 @@ export default function Image(props) {
         <h2>{props.currentCity}</h2>
       </div>
     );
-  } else if (hour > 18 && hour < 20) {
+  } else if (hour > 18 && hour < 21) {
     return (
       <div className="Image">
         <img src={Sunset} alt="sunset by Luna Smith" className="day-image" />
