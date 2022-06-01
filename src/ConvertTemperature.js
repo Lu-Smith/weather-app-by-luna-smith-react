@@ -3,6 +3,7 @@ import CurrentDate from "./CurrentDate";
 import Time from "./Time";
 import WeatherIcon from "./WeatherIcon";
 import Key from "./Key";
+import "./ConvertTemperature.css";
 
 export default function ConvertTemperature(props) {
   const [degree, setDegree] = useState(`celsius`);
@@ -17,24 +18,26 @@ export default function ConvertTemperature(props) {
   if (degree === `celsius`) {
     let temp = `${Math.round(props.celsius)}°C`;
     return (
-      <div className="ConventTemperature">
-        <span>{temp}</span>
-        <button
-          type="button"
-          className="btn btn-danger"
-          onClick={showFahrenheit}
-        >
-          F
-        </button>
-        <button type="button" className="btn btn-danger">
-          C
-        </button>
+      <div className="ConvertTemperature">
+        <div className="degree-choice">
+          <button
+            type="button"
+            className="degree fahrenheit"
+            onClick={showFahrenheit}
+          >
+            F
+          </button>
+          <button type="button" className="degree celsius">
+            C
+          </button>
+        </div>
+        <div>{temp}</div>
         <div className="WeatherData">
           <WeatherIcon icon={props.currentData.icons} />
           Hello, today in {props.currentData.city} weather is:
           <ul>
             <li>
-              <Time date={props.currentData.date} />
+              <Time time={props.currentData.date} />
             </li>
             <li>{temp}</li>
             <li>{props.currentData.descriptions}</li>
@@ -52,19 +55,25 @@ export default function ConvertTemperature(props) {
     let fahrenheitConversion = (props.celsius * 9) / 5 + 32;
     let temp = `${Math.round(fahrenheitConversion)}°F`;
     return (
-      <div className="ConventTemperature">
-        <span>{temp}</span>
-        <button type="button" className="btn btn-danger">
-          F
-        </button>
-        <button type="button" className="btn btn-danger" onClick={showCelsius}>
-          C
-        </button>
+      <div className="ConvertTemperature">
+        <div className="degree-choice">
+          <button type="button" className="degree fahrenheit">
+            F
+          </button>
+          <button
+            type="button"
+            className="degree celsius"
+            onClick={showCelsius}
+          >
+            C
+          </button>
+        </div>
+        <div>{temp}</div>
         <div className="WeatherData">
           Hello, today in {props.currentData.city} weather is:
           <ul>
             <li>
-              <Time date={props.currentData.date} />
+              <Time time={props.currentData.date} />
             </li>
             <li>{temp}</li>
             <li>{props.currentData.descriptions}</li>

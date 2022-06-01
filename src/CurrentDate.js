@@ -1,4 +1,5 @@
 import React from "react";
+import "./CurrentDate.css";
 
 export default function CurrentDate(props) {
   let days = [
@@ -31,26 +32,30 @@ export default function CurrentDate(props) {
   let year = props.date.getFullYear();
   if (number === 1 || number === 31) {
     return (
-      <div className="CurrentDate">
-        Today is {day}, {number}st {month} {year}.
+      <div className="dateSentence">
+        Today is <span className="highlightDay">{day}</span>, {number}st {month}{" "}
+        {year}.
       </div>
     );
   } else if (number === 2) {
     return (
-      <div className="CurrentDate">
-        Today is {day}, {number}nd {month} {year}.
+      <div className="dateSentence">
+        Today is <span className="highlightDay">{day}</span>, {number}nd {month}{" "}
+        {year}.
       </div>
     );
   } else if (number === 3) {
     return (
-      <div className="CurrentDate">
-        Today is {day}, {number}rd {month} {year}.
+      <div className="dateSentence">
+        Today is <span className="highlightDay">{day}</span>, {number}rd {month}{" "}
+        {year}.
       </div>
     );
   } else {
     return (
-      <div className="CurrentDate">
-        Today is {day}, {number}th {month} {year}.
+      <div className="dateSentence">
+        Today is <span className="highlightDay">{day}</span>, {number}th {month}{" "}
+        {year}.
       </div>
     );
   }

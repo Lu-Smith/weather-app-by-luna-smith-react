@@ -1,0 +1,30 @@
+.ConvertTemperature .degree-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+.ConvertTemperature .degree {
+  padding: 10px 80px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 3px 3px 5px rgba(250, 247, 247, 0.5);
+  font-size: 20px;
+  color: #711a75;
+  background: #f582a7;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  transition: all 200ms ease-in-out;
+}
+.ConvertTemperature .celsius {
+  background: #f05687;
+}
+.ConvertTemperature .fahrenheit:hover,
+.celsius:hover {
+  background: #f05687;
+  color: black;
+  cursor: pointer;
+  opacity: 0.8;
+}

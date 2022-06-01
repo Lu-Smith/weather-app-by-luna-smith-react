@@ -10,14 +10,9 @@ export default function SunriseSunset(props) {
     <div className="SunriseSunset">
       <div className="row top">
         <div className="col-3">
-          <img
-            src={Sun}
-            alt="sun emoji by Luna
-  Smith"
-            className="sun"
-          />
+          <img src={Sun} alt="sun emoji by Luna Smith" className="sun" />
           <div className="sunrise">
-            <Sunrise date={props.currentData} />
+            <Sunrise time={props.currentData} />
           </div>
         </div>
         <div className="col-6 day-celebration">
@@ -26,7 +21,7 @@ export default function SunriseSunset(props) {
         <div className="col-3">
           <img src={Moon} alt="moon emoji by Luna Smith" className="moon" />
           <div className="sunset">
-            <Sunset date={props.currentData} />
+            <Sunset time={props.currentData} />
           </div>
         </div>
       </div>
