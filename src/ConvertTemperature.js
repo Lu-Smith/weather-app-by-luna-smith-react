@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CurrentDate from "./CurrentDate";
 import Time from "./Time";
 import WeatherIcon from "./WeatherIcon";
+import Key from "./Key";
 
 export default function ConvertTemperature(props) {
   const [degree, setDegree] = useState(`celsius`);
@@ -42,6 +43,7 @@ export default function ConvertTemperature(props) {
           </ul>
           <div>
             <CurrentDate date={props.currentData.date} />
+            <Key />
           </div>
         </div>
       </div>
