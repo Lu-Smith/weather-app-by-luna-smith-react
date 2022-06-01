@@ -90,6 +90,7 @@ export default function ConvertTemperature(props) {
             timezoneNow={props.currentData.timezone}
           />
           <div>
+            <br />
             <CurrentDate date={props.currentData.date} />
             <Key />
           </div>
