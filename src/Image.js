@@ -9,7 +9,13 @@ import Day from "./media/WeatherApp/daybyLunaSmith.jpg";
 import DayClouds from "./media/WeatherApp/daycloudsbyLunaSmith.jpg";
 
 export default function Image(props) {
-  let hour = props.date.getHours();
+  let timezones = props.timezoneNow;
+  let localTime = props.timeNow.getTime();
+  let localOffset = props.timeNow.getTimezoneOffset() * 60000;
+  let stc = localTime + localOffset;
+  let searchCity = stc + 1000 * +timezones;
+  let searchDate = new Date(searchCity);
+  let hour = searchDate.getHours();
   if (hour < 6) {
     return (
       <div className="Image">

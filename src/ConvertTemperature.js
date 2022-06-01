@@ -35,7 +35,8 @@ export default function ConvertTemperature(props) {
           currentTemp={temp}
           currentCity={props.currentData.city}
           icon={props.currentData.icons}
-          date={props.currentData.date}
+          timezoneNow={props.currentData.timezone}
+          timeNow={props.currentData.date}
         />
 
         <div className="WeatherData">
@@ -75,7 +76,8 @@ export default function ConvertTemperature(props) {
           currentTemp={temp}
           currentCity={props.currentData.city}
           icon={props.currentData.icons}
-          date={props.currentData.date}
+          timezoneNow={props.currentData.timezone}
+          timeNow={props.currentData.date}
         />
         <div className="WeatherData">
           <Table
