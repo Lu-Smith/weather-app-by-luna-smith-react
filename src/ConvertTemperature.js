@@ -37,16 +37,20 @@ export default function ConvertTemperature(props) {
           icon={props.currentData.icons}
         />
         <div className="WeatherData">
-          Today
-          <ul>
-            <li>
-              <Time time={props.currentData.date} />
-            </li>
-            <li>{temp}</li>
-            <li>{props.currentData.descriptions}</li>
-            <li>{Math.round(props.currentData.wind)}km/h</li>
-            <li>{props.currentData.humidity}%</li>
-          </ul>
+          <div className="table">
+            <ul className="table-details">
+              <li className="today">Today</li>
+              <li className="today">
+                <Time time={props.currentData.date} />
+              </li>
+              <li className="today">{temp}</li>
+              <li className="today">{props.currentData.descriptions}</li>
+              <li className="today">
+                🍃{Math.round(props.currentData.wind)}km/h
+              </li>
+              <li className="today">💧{props.currentData.humidity}%</li>
+            </ul>
+          </div>
           <div>
             <CurrentDate date={props.currentData.date} />
             <Key />
@@ -71,18 +75,26 @@ export default function ConvertTemperature(props) {
             C
           </button>
         </div>
-        <div>{temp}</div>
+        <Image
+          currentTemp={temp}
+          currentCity={props.currentData.city}
+          icon={props.currentData.icons}
+        />
         <div className="WeatherData">
-          Hello, today in {props.currentData.city} weather is:
-          <ul>
-            <li>
-              <Time time={props.currentData.date} />
-            </li>
-            <li>{temp}</li>
-            <li>{props.currentData.descriptions}</li>
-            <li>{Math.round(props.currentData.wind)}km/h</li>
-            <li>{props.currentData.humidity}%</li>
-          </ul>
+          <div className="table">
+            <ul className="table-details">
+              <li className="today">Today</li>
+              <li className="today">
+                <Time time={props.currentData.date} />
+              </li>
+              <li className="today">{temp}</li>
+              <li className="today">{props.currentData.descriptions}</li>
+              <li className="today">
+                {Math.round(props.currentData.wind)}km/h
+              </li>
+              <li className="today">{props.currentData.humidity}%</li>
+            </ul>
+          </div>
           <div>
             <CurrentDate date={props.currentData.date} />
             <Key />
