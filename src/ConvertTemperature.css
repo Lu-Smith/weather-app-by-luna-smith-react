@@ -28,3 +28,10 @@
   cursor: pointer;
   opacity: 0.8;
 }
+
+.ConvertTemperature .day-image {
+  display: block;
+  margin: 0 auto;
+  width: 330px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}

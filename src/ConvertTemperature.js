@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CurrentDate from "./CurrentDate";
 import Time from "./Time";
-import WeatherIcon from "./WeatherIcon";
 import Key from "./Key";
+import Image from "./Image";
 import "./ConvertTemperature.css";
 
 export default function ConvertTemperature(props) {
@@ -31,10 +31,13 @@ export default function ConvertTemperature(props) {
             C
           </button>
         </div>
-        <div>{temp}</div>
+        <Image
+          currentTemp={temp}
+          currentCity={props.currentData.city}
+          icon={props.currentData.icons}
+        />
         <div className="WeatherData">
-          <WeatherIcon icon={props.currentData.icons} />
-          Hello, today in {props.currentData.city} weather is:
+          Today
           <ul>
             <li>
               <Time time={props.currentData.date} />
@@ -82,6 +85,7 @@ export default function ConvertTemperature(props) {
           </ul>
           <div>
             <CurrentDate date={props.currentData.date} />
+            <Key />
           </div>
         </div>
       </div>
