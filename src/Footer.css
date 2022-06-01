@@ -1,0 +1,26 @@
+.Footer .weather-forecast {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  padding-top: 200px;
+  color: #711a75;
+  text-shadow: 3px 3px 5px rgba(250, 247, 247, 0.5);
+}
+.Footer .created-by {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  color: #711a75;
+}
+.Footer .portfolio-link,
+.GitHub,
+.Netlify {
+  color: #0f030f;
+  text-decoration: none;
+}
+.Footer .portfolio-link:hover,
+.GitHub:hover,
+.Netlify:hover {
+  color: #f7f1f5;
+}

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import SunriseSunset from "./SunriseSunset";
 import ConvertTemperature from "./ConvertTemperature";
+import Footer from "./Footer";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -37,19 +39,21 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <SunriseSunset currentData={weatherData} />
-        <form onSubmit={handleSearch}>
+        <form onSubmit={handleSearch} className="SearchForm">
           <input
             type="search"
             placeholder="Enter a city"
             autoFocus={true}
             onChange={handleSearchCity}
+            className="inside-form"
           />
-          <input type="submit" value="Search" />
+          <input type="submit" value="🔍" className="inside-form" />
         </form>
         <ConvertTemperature
           celsius={weatherData.temperature}
           currentData={weatherData}
         />
+        <Footer />
       </div>
     );
   } else {
