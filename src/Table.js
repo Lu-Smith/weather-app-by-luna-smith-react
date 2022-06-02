@@ -20,7 +20,10 @@ export default function Table(props) {
           </ul>
         </div>
         <div className="col-9 p-0">
-          <DailyForecast coordinates={props.coordinatesNow} />
+          <DailyForecast
+            coordinates={props.coordinatesNow}
+            unitNow={props.units}
+          />
         </div>
       </div>
     </div>

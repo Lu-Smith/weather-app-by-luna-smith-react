@@ -49,6 +49,7 @@ export default function ConvertTemperature(props) {
             humidity={props.currentData.humidity}
             timezoneNow={props.currentData.timezone}
             coordinatesNow={props.currentData.coordinates}
+            units="metric"
           />
           <div>
             <br />
@@ -92,6 +93,7 @@ export default function ConvertTemperature(props) {
             humidity={props.currentData.humidity}
             timezoneNow={props.currentData.timezone}
             coordinatesNow={props.currentData.coordinates}
+            units="imperial"
           />
           <div>
             <br />

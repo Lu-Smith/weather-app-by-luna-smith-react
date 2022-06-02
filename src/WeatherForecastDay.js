@@ -3,7 +3,7 @@ import React from "react";
 export default function WeatherForecastDay(props) {
   function temperature() {
     let temperature = Math.round(props.data.temp.day);
-    return `${temperature}°C`;
+    return temperature;
   }
 
   function day() {
