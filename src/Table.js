@@ -7,7 +7,7 @@ export default function Table(props) {
   return (
     <div className="Table">
       <div className="row">
-        <div className="col">
+        <div className="col-3 p-0">
           <ul className="table-details">
             <li className="today main-day">Today</li>
             <li className="today">
@@ -19,7 +19,7 @@ export default function Table(props) {
             <li className="today">💧{props.humidity}%</li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col-9 p-0">
           <DailyForecast coordinates={props.coordinatesNow} />
         </div>
       </div>

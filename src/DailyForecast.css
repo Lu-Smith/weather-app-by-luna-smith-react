@@ -1,10 +1,9 @@
-.DailyForecast .row {
-  padding-top: 0px;
-  padding-right: 20px;
+.DailyForecast {
+  width: 95%;
 }
 .DailyForecast .table-details {
   background: red;
-  margin: 13px;
+  margin: 10px 0;
   color: white;
   font-weight: bold;
   box-shadow: 5px 5px 5px #00000080;
