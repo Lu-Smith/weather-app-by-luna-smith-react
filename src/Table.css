@@ -11,14 +11,13 @@
 
 .Table .today {
   background: rgb(239, 239, 106);
-  padding: 8px 0;
+  padding: 8px;
   color: #711a75;
   font-weight: bold;
   box-shadow: 5px 5px 5px #00000080;
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
 }
-
 .Table .main-day {
   font-size: 24px;
   font-family: "Pacifico", cursive;

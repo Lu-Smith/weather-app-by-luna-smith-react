@@ -21,10 +21,11 @@ export default function Weather(props) {
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
       timezone: response.data.timezone,
+      coordinates: response.data.coord,
     });
   }
   function searchCity() {
-    let apiKey = `530086b42621ecf2dfa680253f189a88`;
+    let apiKey = `c53481cd5839be8ed0b6899ac592e3a7`;
     let units = `metric`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);

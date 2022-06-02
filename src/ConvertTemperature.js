@@ -3,6 +3,7 @@ import CurrentDate from "./CurrentDate";
 import Key from "./Key";
 import Image from "./Image";
 import Table from "./Table";
+
 import "./ConvertTemperature.css";
 
 export default function ConvertTemperature(props) {
@@ -47,10 +48,12 @@ export default function ConvertTemperature(props) {
             wind={Math.round(props.currentData.wind)}
             humidity={props.currentData.humidity}
             timezoneNow={props.currentData.timezone}
+            coordinatesNow={props.currentData.coordinates}
           />
           <div>
             <br />
             <CurrentDate date={props.currentData.date} />
+
             <Key />
           </div>
         </div>
@@ -88,6 +91,7 @@ export default function ConvertTemperature(props) {
             wind={Math.round(props.currentData.wind)}
             humidity={props.currentData.humidity}
             timezoneNow={props.currentData.timezone}
+            coordinatesNow={props.currentData.coordinates}
           />
           <div>
             <br />
