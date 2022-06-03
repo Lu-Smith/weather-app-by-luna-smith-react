@@ -24,3 +24,9 @@
 .Netlify:hover {
   color: #f7f1f5;
 }
+
+@media (max-width: 700px) {
+  .Footer .weather-forecast {
+    padding-top: 100px;
+  }
+}

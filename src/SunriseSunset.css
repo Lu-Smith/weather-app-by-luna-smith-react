@@ -4,7 +4,7 @@
   text-align: center;
   color: white;
   width: 80%;
-  padding: 40px 0;
+  padding-top: 50px;
   font-size: 18px;
 }
 .SunriseSunset .row {
@@ -43,5 +43,10 @@
   .sunset {
     bottom: 48px;
     font-size: 12px;
+  }
+
+  .SunriseSunset h1 {
+    width: 90%;
+    padding-top: 15px;
   }
 }

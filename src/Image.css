@@ -17,4 +17,22 @@
   position: relative;
   bottom: 170px;
   left: -80px;
+  text-shadow: 5px 5px 20px rgba(14, 14, 14);
+}
+
+@media (max-width: 700px) {
+  .Image h2 {
+    position: relative;
+    bottom: 80px;
+    font-size: 20px;
+  }
+  .Image .day-image {
+    width: 230px;
+  }
+  .Image .today-weather {
+    position: relative;
+    bottom: 120px;
+    left: -60px;
+    font-size: 20px;
+  }
 }

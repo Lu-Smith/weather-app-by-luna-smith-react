@@ -1,6 +1,5 @@
 .DayEmoji .emoji-image {
-  padding: 8px 0 14px 0;
-  width: 60%;
+  width: 70%;
 }
 
 @media (max-width: 700px) {

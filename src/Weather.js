@@ -42,20 +42,22 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <SunriseSunset currentData={weatherData} />
-        <form onSubmit={handleSearch} className="SearchForm">
-          <input
-            type="search"
-            placeholder="Enter a city"
-            autoFocus={true}
-            onChange={handleSearchCity}
-            className="inside-form"
+        <div className="weather-main">
+          <form onSubmit={handleSearch} className="SearchForm">
+            <input
+              type="search"
+              placeholder="Enter a city"
+              autoFocus={true}
+              onChange={handleSearchCity}
+              className="inside-form"
+            />
+            <input type="submit" value="🔍" className="inside-form" />
+          </form>
+          <ConvertTemperature
+            celsius={weatherData.temperature}
+            currentData={weatherData}
           />
-          <input type="submit" value="🔍" className="inside-form" />
-        </form>
-        <ConvertTemperature
-          celsius={weatherData.temperature}
-          currentData={weatherData}
-        />
+        </div>
         <Footer />
       </div>
     );

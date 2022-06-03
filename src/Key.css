@@ -1,3 +1,11 @@
 .Key.menu {
   margin-top: 40px;
+  font-family: "Pacifico", cursive;
+  color: #541458;
+}
+
+@media (max-width: 700px) {
+  .Key.menu {
+    font-size: 14px;
+  }
 }

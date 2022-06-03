@@ -14,7 +14,6 @@
   padding: 8px;
   color: #711a75;
   font-weight: bold;
-  box-shadow: 5px 5px 5px #00000080;
   font-size: 22px;
   font-family: "Pacifico", cursive;
 }
@@ -25,7 +24,17 @@
 }
 
 .Table .emoji-line {
-  line-height: 100px;
+  line-height: 90px;
+}
+
+ul li:first-child {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 820px) {
+  .Table .unit {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
@@ -42,5 +51,9 @@
   }
   .Table .unit {
     display: none;
+  }
+
+  ul li:first-child {
+    margin-bottom: 2px;
   }
 }
