@@ -7,8 +7,10 @@ import Sunrise from "./media/WeatherApp/sunrisebyLunaSmith.jpg";
 import Sunset from "./media/WeatherApp/sunsetbyLunaSmith.jpg";
 import Day from "./media/WeatherApp/daybyLunaSmith.jpg";
 import DayClouds from "./media/WeatherApp/daycloudsbyLunaSmith.jpg";
+import Snow from "./media/WeatherApp/snowbyLunaSmith.jpg";
 
 export default function Image(props) {
+  let month = props.timeNow.getMonth();
   let timezones = props.timezoneNow;
   let localTime = props.timeNow.getTime();
   let localOffset = props.timeNow.getTimezoneOffset() * 60000;
@@ -43,10 +45,34 @@ export default function Image(props) {
         <h2>{props.currentCity}</h2>
       </div>
     );
-  } else if (hour > 8 && hour < 12) {
+  } else if (
+    hour > 8 &&
+    hour < 12 &&
+    month !== 0 &&
+    month !== 1 &&
+    month !== 2
+  ) {
     return (
       <div className="Image">
         <img src={Day} alt="day by Luna Smith" className="day-image" />
+
+        <div className="row today-weather">
+          <div className="col today-icon">
+            <WeatherIcon icon={props.icon} />
+            {props.currentTemp}
+          </div>
+        </div>
+        <h2>{props.currentCity}</h2>
+      </div>
+    );
+  } else if (
+    hour > 8 &&
+    hour < 12 &&
+    (month === 0 || month === 1 || month === 2)
+  ) {
+    return (
+      <div className="Image">
+        <img src={Snow} alt="day by Luna Smith" className="day-image" />
 
         <div className="row today-weather">
           <div className="col today-icon">
