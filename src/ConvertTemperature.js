@@ -45,6 +45,7 @@ export default function ConvertTemperature(props) {
             timeNow={props.currentData.date}
             currentTemp={temp}
             description={props.currentData.descriptions}
+            main={props.currentData.main}
             wind={Math.round(props.currentData.wind)}
             humidity={props.currentData.humidity}
             timezoneNow={props.currentData.timezone}
@@ -89,6 +90,7 @@ export default function ConvertTemperature(props) {
             timeNow={props.currentData.date}
             currentTemp={temp}
             description={props.currentData.descriptions}
+            main={props.currentData.main}
             wind={Math.round(props.currentData.wind)}
             humidity={props.currentData.humidity}
             timezoneNow={props.currentData.timezone}
