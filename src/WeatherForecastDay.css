@@ -31,3 +31,16 @@
 .WeatherForecastDay .emoji-line {
   line-height: 100px;
 }
+
+@media (max-width: 700px) {
+  .WeatherForecastDay .day {
+    font-size: 15px;
+  }
+  .WeatherForecastDay .main-daily-day {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .WeatherForecastDay .emoji-line {
+    line-height: 60px;
+  }
+}

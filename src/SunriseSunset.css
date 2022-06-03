@@ -24,7 +24,7 @@
 .SunriseSunset .sunrise,
 .sunset {
   position: relative;
-  bottom: 65px;
+  bottom: 75px;
   width: 80%;
   display: block;
   margin: 0 auto;
@@ -36,4 +36,12 @@
 }
 .SunriseSunset .sunset {
   color: #2e486b;
+}
+
+@media (max-width: 700px) {
+  .SunriseSunset .sunrise,
+  .sunset {
+    bottom: 48px;
+    font-size: 12px;
+  }
 }
