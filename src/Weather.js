@@ -51,7 +51,7 @@ export default function Weather(props) {
               onChange={handleSearchCity}
               className="inside-form"
             />
-            <input type="submit" value="🔍" className="inside-form" />
+            <input type="submit" value="🔍" className="inside-form search" />
           </form>
           <ConvertTemperature
             celsius={weatherData.temperature}

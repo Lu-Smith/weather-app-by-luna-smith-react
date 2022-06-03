@@ -9,12 +9,16 @@
   position: relative;
   bottom: 40px;
 }
-.Weather .inside-form,
-.my-city {
+.Weather .inside-form {
   border: 2px solid #7a5779;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-  padding: 10px 25px;
+  padding: 8px 23px;
+  font-size: 20px;
+}
+
+.Weather .search {
+  background: #f582a7;
 }
 
 @media (max-width: 700px) {

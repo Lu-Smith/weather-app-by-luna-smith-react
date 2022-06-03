@@ -19,10 +19,17 @@
   transition: all 200ms ease-in-out;
 }
 .ConvertTemperature .celsius {
-  background: #f05687;
+  background: #f582a7;
 }
 .ConvertTemperature .fahrenheit:hover,
 .celsius:hover {
+  background: #f05687;
+  color: black;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.ConvertTemperature .active {
   background: #f05687;
   color: black;
   cursor: pointer;

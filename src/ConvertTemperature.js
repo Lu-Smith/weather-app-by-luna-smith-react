@@ -28,7 +28,7 @@ export default function ConvertTemperature(props) {
           >
             F
           </button>
-          <button type="button" className="degree celsius">
+          <button type="button" className="degree celsius active">
             C
           </button>
         </div>
@@ -67,7 +67,7 @@ export default function ConvertTemperature(props) {
     return (
       <div className="ConvertTemperature">
         <div className="degree-choice">
-          <button type="button" className="degree fahrenheit">
+          <button type="button" className="degree fahrenheit active">
             F
           </button>
           <button

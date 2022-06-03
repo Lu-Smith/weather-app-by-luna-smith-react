@@ -28,7 +28,7 @@
 }
 
 ul li:first-child {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 @media (max-width: 820px) {
