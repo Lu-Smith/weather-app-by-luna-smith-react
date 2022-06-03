@@ -18,8 +18,13 @@ export default function Table(props) {
             <li className="today emoji-line">
               <Emoji descriptionNow={props.description} mainNow={props.main} />
             </li>
-            <li className="today">🍃{props.wind} km/h</li>
-            <li className="today">💧{props.humidity}%</li>
+            <li className="today">
+              🍃{props.wind} <span className="unit">km/h</span>
+            </li>
+            <li className="today">
+              💧{props.humidity}
+              <span className="unit">%</span>
+            </li>
           </ul>
         </div>
         <div className="col-9 p-0">

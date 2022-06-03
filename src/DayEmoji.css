@@ -2,3 +2,10 @@
   padding: 8px 0 14px 0;
   width: 60%;
 }
+
+@media (max-width: 700px) {
+  .DayEmoji .emoji-image {
+    padding: 0;
+    width: 60%;
+  }
+}

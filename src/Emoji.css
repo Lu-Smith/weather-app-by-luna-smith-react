@@ -1,3 +1,9 @@
 .Emoji .emoji-image {
   width: 60%;
 }
+
+@media (max-width: 700px) {
+  .Emoji .emoji-image {
+    width: 50%;
+  }
+}

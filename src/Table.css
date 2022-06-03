@@ -38,5 +38,9 @@
   }
   .Table .emoji-line {
     line-height: 60px;
+    padding: 0;
+  }
+  .Table .unit {
+    display: none;
   }
 }

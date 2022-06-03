@@ -40,7 +40,7 @@
     font-size: 17px;
     line-height: 30px;
   }
-  .WeatherForecastDay .emoji-line {
-    line-height: 60px;
+  .WeatherForecastDay .date {
+    font-size: 13px;
   }
 }
