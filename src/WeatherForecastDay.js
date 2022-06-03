@@ -1,4 +1,5 @@
 import React from "react";
+import DayEmoji from "./DayEmoji";
 
 export default function WeatherForecastDay(props) {
   function temperature() {
@@ -53,7 +54,10 @@ export default function WeatherForecastDay(props) {
       <div className="DailyForecast-date day">{date()}</div>
       <div className="DailyForecast-temperature day">{temperature()}</div>
       <div className="DailyForecast-description day text-capitalize">
-        {props.data.weather[0].description}
+        <DayEmoji
+          descriptionNow={props.data.weather[0].description}
+          mainNow={props.data.weather[0].main}
+        />
       </div>
       <div className="DailyForecast-wind day">🍃 {wind()}</div>
       <div className="DailyForecast-humidity day">

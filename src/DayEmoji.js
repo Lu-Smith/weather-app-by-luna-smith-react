@@ -1,5 +1,5 @@
 import React from "react";
-import "./Emoji.css";
+import "./DayEmoji.css";
 import BrokenClouds from "./media/Emojis/WeatherEmojis/brokencloudsbyLunaSmith.png";
 import Clouds from "./media/Emojis/WeatherEmojis/cloudsbyLunaSmith.png";
 import Drizzle from "./media/Emojis/WeatherEmojis/lightrainbyLunaSmith.png";
@@ -13,13 +13,13 @@ import Clear from "./media/Emojis/WeatherEmojis/sunnybyLunaSmith.png";
 import Thunderstorm from "./media/Emojis/WeatherEmojis/thunderbyLunaSmith.png";
 import Tornado from "./media/Emojis/WeatherEmojis/tornadobyLunaSmith.png";
 
-export default function Emoji(props) {
+export default function DayEmoji(props) {
   if (
     props.descriptionNow === "few clouds" ||
     props.descriptionNow === "scattered clouds"
   ) {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img
           src={PartlySunny}
           alt={props.descriptionNow}
@@ -29,19 +29,19 @@ export default function Emoji(props) {
     );
   } else if (props.descriptionNow === "overcast clouds") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Clouds} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Drizzle") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Drizzle} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Thunderstorm") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img
           src={Thunderstorm}
           alt={props.descriptionNow}
@@ -51,25 +51,25 @@ export default function Emoji(props) {
     );
   } else if (props.mainNow === "Clear") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Clear} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Tornado") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Tornado} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Smoke") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Smoke} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Snow") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Snow} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
@@ -78,31 +78,31 @@ export default function Emoji(props) {
     props.descriptionNow === "light rain"
   ) {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Drizzle} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Rain") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Rain} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Mist") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Mist} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else if (props.mainNow === "Sand") {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img src={Sand} alt={props.descriptionNow} className="emoji-image" />
       </div>
     );
   } else {
     return (
-      <div className="Emoji">
+      <div className="DayEmoji">
         <img
           src={BrokenClouds}
           alt={props.descriptionNow}
