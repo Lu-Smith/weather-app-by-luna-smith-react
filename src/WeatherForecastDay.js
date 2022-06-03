@@ -1,5 +1,6 @@
 import React from "react";
 import DayEmoji from "./DayEmoji";
+import "./WeatherForecastDay.css";
 
 export default function WeatherForecastDay(props) {
   function temperature() {
@@ -54,17 +55,19 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div className="WeatherForecastDay">
-      <div className="DailyForecast-day main-daily-day">{day()}</div>
-      <div className="DailyForecast-date day">{date()}</div>
-      <div className="DailyForecast-temperature day">{temperature()}</div>
-      <div className="DailyForecast-description day text-capitalize">
-        <DayEmoji
-          descriptionNow={props.data.weather[0].description}
-          mainNow={props.data.weather[0].main}
-        />
-      </div>
-      <div className="DailyForecast-wind day">🍃 {wind()}</div>
-      <div className="DailyForecast-humidity day">💧 {props.data.humidity}</div>
+      <ul className="daily-table">
+        <li className="main-daily-day">{day()}</li>
+        <li className="day date">{date()}</li>
+        <li className="day">{temperature()}</li>
+        <li className="day emoji-line">
+          <DayEmoji
+            descriptionNow={props.data.weather[0].description}
+            mainNow={props.data.weather[0].main}
+          />
+        </li>
+        <li className="day">🍃 {wind()}</li>
+        <li className="day">💧 {props.data.humidity}</li>
+      </ul>
     </div>
   );
 }

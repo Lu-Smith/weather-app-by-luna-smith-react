@@ -15,7 +15,7 @@ export default function Table(props) {
               <Time time={props.timeNow} timezone={props.timezoneNow} />
             </li>
             <li className="today">{props.currentTemp}</li>
-            <li className="today text-capitalize">
+            <li className="today emoji-line">
               <Emoji descriptionNow={props.description} mainNow={props.main} />
             </li>
             <li className="today">🍃{props.wind} km/h</li>

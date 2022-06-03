@@ -1,5 +1,4 @@
 .Table {
-  background: #f582a7;
   line-height: 45px;
 }
 
@@ -16,10 +15,15 @@
   color: #711a75;
   font-weight: bold;
   box-shadow: 5px 5px 5px #00000080;
-  font-size: 18px;
+  font-size: 22px;
   font-family: "Pacifico", cursive;
 }
-.main-day {
-  font-size: 24px;
+.Table .main-day {
+  font-size: 26px;
   text-shadow: 3px 3px 5px #00000080;
+  line-height: 50px;
+}
+
+.Table .emoji-line {
+  line-height: 100px;
 }

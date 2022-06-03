@@ -1,0 +1,33 @@
+.WeatherForecastDay .daily-table {
+  line-height: 45px;
+}
+
+.WeatherForecastDay .daily-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.WeatherForecastDay .day,
+.main-daily-day {
+  background: #f582a7;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px #00000080;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.WeatherForecastDay .main-daily-day {
+  font-size: 22px;
+  text-shadow: 3px 3px 5px #00000080;
+  font-family: "Pacifico", cursive;
+  line-height: 50px;
+}
+.WeatherForecastDay .date {
+  font-style: italic;
+}
+
+.WeatherForecastDay .emoji-line {
+  line-height: 100px;
+}
