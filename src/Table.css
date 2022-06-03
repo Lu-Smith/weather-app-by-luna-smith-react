@@ -1,24 +1,25 @@
 .Table {
   background: #f582a7;
-  padding: 10px;
   line-height: 45px;
 }
 
 .Table .table-details {
   list-style: none;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
 }
 
-.Table .today {
+.Table .today,
+.main-day {
   background: rgb(239, 239, 106);
   padding: 8px;
   color: #711a75;
   font-weight: bold;
   box-shadow: 5px 5px 5px #00000080;
   font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
-}
-.Table .main-day {
-  font-size: 24px;
   font-family: "Pacifico", cursive;
+}
+.main-day {
+  font-size: 24px;
+  text-shadow: 3px 3px 5px #00000080;
 }

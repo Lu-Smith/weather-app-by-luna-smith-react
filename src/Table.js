@@ -10,7 +10,7 @@ export default function Table(props) {
       <div className="row">
         <div className="col-3 p-0">
           <ul className="table-details">
-            <li className="today main-day">Today</li>
+            <li className="main-day">Today</li>
             <li className="today">
               <Time time={props.timeNow} timezone={props.timezoneNow} />
             </li>
@@ -18,7 +18,7 @@ export default function Table(props) {
             <li className="today text-capitalize">
               <Emoji descriptionNow={props.description} mainNow={props.main} />
             </li>
-            <li className="today">🍃{props.wind}km/h</li>
+            <li className="today">🍃{props.wind} km/h</li>
             <li className="today">💧{props.humidity}%</li>
           </ul>
         </div>

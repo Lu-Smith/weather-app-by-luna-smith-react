@@ -33,7 +33,11 @@ export default function WeatherForecastDay(props) {
     let month = months[date.getMonth()];
     let number = date.getDate();
     if (number === 1 || number === 31) {
-      return `${number}st ${month}`;
+      return (
+        <span className="daily-date">
+          ${number}st ${month}
+        </span>
+      );
     } else if (number === 2) {
       return `${number}nd ${month}`;
     } else if (number === 3) {
@@ -60,9 +64,7 @@ export default function WeatherForecastDay(props) {
         />
       </div>
       <div className="DailyForecast-wind day">🍃 {wind()}</div>
-      <div className="DailyForecast-humidity day">
-        💧 {props.data.humidity}%
-      </div>
+      <div className="DailyForecast-humidity day">💧 {props.data.humidity}</div>
     </div>
   );
 }

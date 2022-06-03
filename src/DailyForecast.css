@@ -1,8 +1,8 @@
 .DailyForecast {
-  width: 95%;
+  width: 97%;
 }
 .DailyForecast .table-details {
-  background: red;
+  background: #f582a7;
   margin: 10px 0;
   color: white;
   font-weight: bold;
@@ -15,7 +15,10 @@
   padding: 7.5px;
 }
 
-.Table .main-daily-day {
-  font-size: 24px;
+.DailyForecast .main-daily-day {
+  font-size: 20px;
   font-family: "Pacifico", cursive;
+  padding: 10px;
+  color: #711a75;
+  text-shadow: 3px 3px 5px #00000080;
 }
