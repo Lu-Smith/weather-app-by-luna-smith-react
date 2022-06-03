@@ -18,7 +18,7 @@ export default function Image(props) {
   let searchCity = stc + 1000 * +timezones;
   let searchDate = new Date(searchCity);
   let hour = searchDate.getHours();
-  if (hour < 6) {
+  if (hour <= 5) {
     return (
       <div className="Image">
         <img src={Galaxy} alt="galaxy by Luna Smith" className="day-image" />
@@ -32,7 +32,7 @@ export default function Image(props) {
         <h2>{props.currentCity}</h2>
       </div>
     );
-  } else if (hour > 5 && hour < 8) {
+  } else if (hour > 5 && hour <= 8) {
     return (
       <div className="Image">
         <img src={Sunrise} alt="sunrise by Luna Smith" className="day-image" />
@@ -47,7 +47,7 @@ export default function Image(props) {
     );
   } else if (
     hour > 8 &&
-    hour < 12 &&
+    hour <= 12 &&
     month !== 0 &&
     month !== 1 &&
     month !== 2
@@ -67,7 +67,7 @@ export default function Image(props) {
     );
   } else if (
     hour > 8 &&
-    hour < 12 &&
+    hour <= 12 &&
     (month === 0 || month === 1 || month === 2)
   ) {
     return (
@@ -83,7 +83,7 @@ export default function Image(props) {
         <h2>{props.currentCity}</h2>
       </div>
     );
-  } else if (hour > 12 && hour < 17) {
+  } else if (hour > 12 && hour <= 17) {
     return (
       <div className="Image">
         <img
@@ -101,7 +101,7 @@ export default function Image(props) {
         <h2>{props.currentCity}</h2>
       </div>
     );
-  } else if (hour > 17 && hour < 21) {
+  } else if (hour > 17 && hour <= 21) {
     return (
       <div className="Image">
         <img src={Sunset} alt="sunset by Luna Smith" className="day-image" />
