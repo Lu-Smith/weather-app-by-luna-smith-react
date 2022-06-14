@@ -30,5 +30,6 @@
   .Weather .inside-form {
     padding: 5px 10px;
     font-size: 16px;
+    max-width: 200px;
   }
 }
